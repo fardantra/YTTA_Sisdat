@@ -1,14 +1,16 @@
 <?php
-$env = parse_ini_file('../.env');
-$hostname = $env["DB_HOSTNAME"];
-$username = $env["DB_USER"];
+$env = parse_ini_file(__DIR__ . '/../.env');
+
+$host = $env["DB_HOSTNAME"];
+$user = $env["DB_USER"];
 $password = $env["DB_PASSWORD"];
-$db_name = $env["MODE"] === "development" ? $env["DB_NAME_DEV"] : $env['DB_NAME_PROD'];
+$db_name = $env["DB_NAME"];
 $port = $env["DB_PORT"];
 
-$db = new mysqli($hostname, $username, $paswword, $db_name, $port);
+$conn = new mysqli($host, $user, $password, $db_name, $port);
 
-if ($db->connect_error){
-    die("Connection Failed");
+if ($conn->connect_error) {
+  die("Connection Failed");
 }
+
 

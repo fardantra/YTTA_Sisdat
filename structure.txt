@@ -1,0 +1,31 @@
+/project-folder
+│
+├── /assets
+│   ├── /css
+│   │   └── style.css              # Custom CSS jika diperlukan
+│   └── /js
+│       └── script.js              # JavaScript tambahan
+│
+├── /pages
+│   ├── dashboard.php              # Halaman utama setelah login
+│   ├── projects.php               # Daftar semua proyek
+│   ├── project-detail.php         # Detail sebuah proyek
+│   ├── my-tasks.php               # Tugas pribadi pengguna
+│   ├── profile.php                # Pengaturan profil pengguna
+│   └── logout.php                 # Fungsi logout
+│
+├── /includes
+│   ├── header.php                 # Bagian atas (navbar)
+│   ├── sidebar.php                # Sidebar menu
+│   ├── footer.php                 # Footer
+│   └── db.php                     # Koneksi ke database MySQL
+│
+├── /auth
+│   ├── login.php                  # Halaman login
+│   ├── register.php               # Halaman registrasi
+│   ├── login-process.php          # Proses login
+│   └── register-process.php       # Proses registrasi
+│
+├── index.php                      # Homepage (redirect ke login jika belum login)
+├── .htaccess                      # Jika pakai URL rewrite (opsional)
+└── README.md                      # Dokumentasi singkat
